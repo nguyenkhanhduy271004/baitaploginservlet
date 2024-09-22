@@ -1,4 +1,4 @@
-package com.example.login;
+package controllers;
 
 import config.Database;
 import helper.HashUtil;

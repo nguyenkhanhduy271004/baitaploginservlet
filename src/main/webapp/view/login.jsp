@@ -11,6 +11,13 @@
         <div class="col-sm-8 col-md-6 col-lg-4">
             <div class="card p-4 shadow-sm">
                 <h2 class="text-center mb-4">Login</h2>
+                <c:if test="${not empty errorMessage}">
+                    <span class="mt-3" style="color: red">${errorMessage}</span>
+                </c:if>
+
+                <c:if test="${not empty successMessage}">
+                    <span class="mt-3" style="color: green">${successMessage}</span>
+                </c:if>
                 <form action="login" method="POST">
 
                     <div class="mb-3">
@@ -35,18 +42,12 @@
                         <a href="forgotPassword">Forget password</a>
                     </div>
 
-
-
                     <button type="submit" class="btn btn-primary w-100">Login</button>
                 </form>
 
-                <c:if test="${not empty errorMessage}">
-                    <span class="mt-3" style="color: red">${errorMessage}</span>
-                </c:if>
-
-                <c:if test="${not empty successMessage}">
-                    <span class="mt-3" style="color: green">${successMessage}</span>
-                </c:if>
+                <div class="d-flex justify-content-center align-center">
+                    <a href="register">Don't have account? Register here</a>
+                </div>
             </div>
         </div>
     </div>

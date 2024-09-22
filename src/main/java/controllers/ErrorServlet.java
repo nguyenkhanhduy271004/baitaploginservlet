@@ -1,4 +1,4 @@
-package com.example.login;
+package controllers;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -8,11 +8,12 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
-@WebServlet("/dashboard")
-public class DashboardServlet extends HttpServlet {
+@WebServlet(urlPatterns = {"/error"})
+public class ErrorServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("view/dashboard.jsp").forward(req, resp);
+        req.getRequestDispatcher("view/error.jsp").forward(req, resp);
     }
 }
+

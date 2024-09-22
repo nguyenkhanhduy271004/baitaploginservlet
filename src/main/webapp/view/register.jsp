@@ -27,15 +27,20 @@
             <input type="password" id="password" name="password" class="form-control" required>
           </div>
 
-<%--          <div class="mb-3">--%>
+
+        <%--          <div class="mb-3">--%>
 <%--            <label for="email" class="form-label">Email</label>--%>
 <%--            <input type="email" id="email" name="email" class="form-control" required>--%>
 <%--          </div>--%>
 
           <button type="submit" class="btn btn-primary w-100">Register</button>
         </form>
+          <div class="d-flex justify-content-center align-center">
+              <a href="login">Login here</a>
+          </div>
 
-        <c:if test="${not empty errorMessage}">
+
+          <c:if test="${not empty errorMessage}">
           <div class="mt-3">${errorMessage}</div>
         </c:if>
       </div>
